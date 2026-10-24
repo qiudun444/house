@@ -6,19 +6,6 @@ log-level: info
 proxies:
 - name: 🇮🇱 IL 01 - xiaohe
   type: vless
-  server: 199.181.197.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime19.workers.dev
-- name: 🇮🇱 IL 02 - xiaohe
-  type: vless
   server: 185.253.75.119
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -37,13 +24,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇱 IL 01 - xiaohe
-  - 🇮🇱 IL 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇮🇱 IL 01 - xiaohe
-  - 🇮🇱 IL 02 - xiaohe
 rules:
 - MATCH,PROXIES

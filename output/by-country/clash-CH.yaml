@@ -15,19 +15,21 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
 - name: 🇨🇭 CH 02 - xiaohe
   type: vless
-  server: 208.69.78.217
-  port: 2053
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  server: 175.41.179.37
+  port: 51262
+  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
 - name: 🇨🇭 CH 03 - xiaohe
   type: vless
   server: 208.69.78.217
@@ -51,7 +53,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: 🇨🇭 CH 05 - xiaohe
   type: vless
   server: 208.69.78.217
@@ -63,8 +65,33 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: 🇨🇭 CH 06 - xiaohe
+  type: vless
+  server: 185.148.107.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime55.workers.dev
+- name: 🇨🇭 CH 07 - xiaohe
+  type: vless
+  server: 208.69.78.217
+  port: 2053
+  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
+  servername: www.apple.com
+  client-fingerprint: random
+- name: 🇨🇭 CH 08 - xiaohe
   type: vless
   server: 208.69.78.217
   port: 2053
@@ -87,6 +114,8 @@ proxy-groups:
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
   - 🇨🇭 CH 06 - xiaohe
+  - 🇨🇭 CH 07 - xiaohe
+  - 🇨🇭 CH 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -98,5 +127,7 @@ proxy-groups:
   - 🇨🇭 CH 04 - xiaohe
   - 🇨🇭 CH 05 - xiaohe
   - 🇨🇭 CH 06 - xiaohe
+  - 🇨🇭 CH 07 - xiaohe
+  - 🇨🇭 CH 08 - xiaohe
 rules:
 - MATCH,PROXIES
